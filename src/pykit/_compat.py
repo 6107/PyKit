@@ -27,11 +27,12 @@ def warn_deprecated(old: str, new: str, stacklevel: int = 3) -> None:
         new: The replacement name.
         stacklevel: Stack level used for the warning location.
     """
-    warnings.warn(
-        f"'{old}' is deprecated, use '{new}' instead",
-        DeprecationWarning,
-        stacklevel=stacklevel,
-    )
+    # warnings.warn(
+    #     f"'{old}' is deprecated, use '{new}' instead",
+    #     DeprecationWarning,
+    #     stacklevel=stacklevel,
+    # )
+    pass   # For now, let developers use the old names without spamming warnings. That will kill robot performance
 
 
 def _make_alias(cls: type, old: str, new: str) -> Any:
