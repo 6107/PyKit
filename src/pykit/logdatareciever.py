@@ -1,20 +1,15 @@
-from pykit.logtable import LogTable
+"""Deprecated module name (misspelled). Use :mod:`pykit.logdatareceiver` instead."""
 
+import warnings
 
-class LogDataReciever:
-    """An abstract base class for classes that receive and process log data."""
+from pykit.logdatareceiver import LogDataReceiver
 
-    timestampKey: str = "/Timestamp"
+warnings.warn(
+    "'pykit.logdatareciever' is deprecated, use 'pykit.logdatareceiver' instead",
+    DeprecationWarning,
+    stacklevel=2,
+)
 
-    def start(self):
-        """Called when the logging process starts. Can be used for initialization."""
+LogDataReciever = LogDataReceiver
 
-    def end(self):
-        """Called when the logging process ends. Can be used for cleanup."""
-
-    def putTable(self, table: LogTable):
-        """
-        Processes a `LogTable` instance. This method is called for each log entry.
-
-        :param table: The `LogTable` containing the log data for a specific timestamp.
-        """
+__all__ = ["LogDataReciever"]

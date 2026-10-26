@@ -6,7 +6,7 @@ pykit package
 
    pykit
     pykit.autolog
-    pykit.logdatareciever
+    pykit.logdatareceiver
     pykit.loggedrobot
     pykit.logger
     pykit.logreplaysource

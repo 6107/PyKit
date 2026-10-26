@@ -52,7 +52,7 @@ class KitBot2025(LoggedRobot):
             case constants.RobotModes.SIMULATION:
                 Logger.addDataReciever(NT4Publisher(True))
             case constants.RobotModes.REPLAY:
-                self.useTiming = False  # run as fast as possible
+                self.use_timing = False  # run as fast as possible
                 log_path = os.environ["LOG_PATH"]
                 log_path = os.path.abspath(log_path)
                 print(f"Starting log from {log_path}")

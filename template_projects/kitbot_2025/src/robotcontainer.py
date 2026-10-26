@@ -93,4 +93,4 @@ class RobotContainer:
         )
 
     def getAutonomousCommand(self) -> Optional[Command]:
-        return self.autoChooser.getSelected()
+        return self.autoChooser.get_selected()

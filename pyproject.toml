@@ -19,14 +19,28 @@ dependencies = [
     "robotpy-hal >=2026.1.1",
     "pyfrc >= 2026.0.1",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.14"
+
+[project.optional-dependencies]
+commands = ["robotpy-commands-v2 >=2026.2.2"]
+
+[dependency-groups]
+dev = [
+    "pytest >=9.0.3",
+    "pytest-cov >=6.0.0",
+    "robotpy-commands-v2 >=2026.2.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
 
 
 [project.urls]
 Homepage = "https://github.com/1757WestwoodRobotics/PyKit"
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.14"
 warn_unused_configs = true
 explicit_package_bases = true
 mypy_path = "."
